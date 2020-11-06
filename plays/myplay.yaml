@@ -1,0 +1,11 @@
+---
+- name: Get some system info
+  become: true
+  hosts: all
+  tasks:
+    - name: Get the kernel version
+      shell: uname -r
+      register: kernel_version
+
+    - name: Display the kernel version
+      debug: var=kernel_version.stdout

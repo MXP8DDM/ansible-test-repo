@@ -1,0 +1,8 @@
+---
+all:
+  hosts:
+    manged-host:
+      ansible_host: 10.128.0.19
+  vars:
+    ansible_user: automation
+    become: true
